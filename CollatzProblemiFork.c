@@ -25,7 +25,7 @@ int main(int argc, char *argv[]) {
         if (pid == -1) {
             fprintf(stderr, "Unable to fork child\n");
             return EXIT_FAILURE;
-        } else if (pid == 0) { /* child process */
+        } else if (pid == 0) { 
             pid_t child_pid = getpid();
 
             printf("\nChild %d (ID: %d)\n", x, child_pid);
@@ -37,9 +37,9 @@ int main(int argc, char *argv[]) {
 
             printf("\n\nAbout to end execution (I'm process %d).\n", child_pid);
 
-            return EXIT_SUCCESS; /* child terminates */
+            return EXIT_SUCCESS; 
         }
-        else { /* parent process */
+        else { 
             n = n + 3;
         }
     }
